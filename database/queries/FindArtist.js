@@ -6,4 +6,7 @@ const Artist = require('../models/artist');
  * @return {promise} A promise that resolves with the Artist that matches the id
  */
 module.exports = (_id) => {
+    // alternative approach
+    // return Artist.findById(_id);
+    return Artist.findOne({_id: _id});
 };
